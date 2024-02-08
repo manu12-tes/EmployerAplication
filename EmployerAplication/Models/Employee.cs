@@ -8,8 +8,7 @@ namespace EmployerAplication.Models
         public string Name { get; set; }
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "El RFC es requerido")]
-        [StringLength(13, MinimumLength = 12, ErrorMessage = "El RFC debe tener entre 12 y 13 caracteres")]
+        [StringLength(13, MinimumLength = 12, ErrorMessage = "RFC must have beetwen 12 and 13 characters")]
         public string RFC { get; set; }
         public DateTime BornDate { get; set; }
         public EmployeeStatus Status { get; set; }

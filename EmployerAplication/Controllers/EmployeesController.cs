@@ -125,6 +125,23 @@ namespace EmployerAplication.Controllers
                 return View(employee);
             }
 
+            String subStringsLastNamePattern = employee.LastName.Split(' ')[0];
+            String subStringsLastNameMattern = employee.LastName.Split(' ')[1];
+            String Name = employee.Name;
+            String BornDate = employee.BornDate.ToString();
+
+            /*if (subStringsLastNamePattern.Substring(0, 2)!=employee.RFC.Substring(0,2)
+                && subStringsLastNameMattern.Substring(0,1)!=employee.RFC.Substring(2,1) 
+                && Name.Substring(0,1)!=employee.RFC.Substring(3,1)
+                && BornDate.Substring(8,2)!=employee.RFC.Substring(4,2)
+                && BornDate.Substring(3, 2) != employee.RFC.Substring(6,2)
+                && BornDate.Substring(0, 2) != employee.RFC.Substring(8, 2))
+            {
+                ModelState.AddModelError("RFC", "Invalid Format for this RFC");
+                return View(employee);
+
+            }*/
+
             if (ModelState.IsValid)
             {
                 try
